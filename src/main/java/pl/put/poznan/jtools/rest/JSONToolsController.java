@@ -2,7 +2,7 @@ package pl.put.poznan.jtools.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import pl.put.poznan.jtools.logic.TextTransformer;
+import pl.put.poznan.jtools.logic.JSONToolsTransformer;
 
 import java.util.Arrays;
 
@@ -22,7 +22,7 @@ public class JSONToolsController {
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
+        JSONToolsTransformer transformer = new JSONToolsTransformer(transforms);
         return transformer.transform(text);
     }
 
@@ -35,7 +35,7 @@ public class JSONToolsController {
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        TextTransformer transformer = new TextTransformer(transforms);
+        JSONToolsTransformer transformer = new JSONToolsTransformer(transforms);
         return transformer.transform(text);
     }
 
