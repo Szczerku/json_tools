@@ -52,8 +52,8 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="TextTransformerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.transformer.app.TextTransformerApplication" />
+    <configuration name="JSONToolsApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.app.JSONToolsApplication" />
       <module name="ioprojectarchitecture" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <extension name="coverage">
@@ -99,7 +99,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.TextTransformerApplication" />
+        <item itemvalue="Application.JSONToolsApplication" />
       </list>
     </recent_temporary>
   </component>
