@@ -2,9 +2,11 @@ package pl.put.poznan.jtools.rest;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
-import pl.put.poznan.jtools.logic.JSONToolsTransformer;
+import pl.put.poznan.jtools.logic.*;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 
 @RestController
@@ -22,8 +24,11 @@ public class JSONToolsController {
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        JSONToolsTransformer transformer = new JSONToolsTransformer(transforms);
-        return transformer.transform(text);
+        List<String> wl = new ArrayList<String>();
+        wl.add("One");
+        wl.add("Another");
+        JsonObjectInterface json = new JsonMinifier(new JsonBeautifier(new JsonWhitelist(new JsonBlacklist(new JsonObject(), wl),wl)));
+        return json.decorate();
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
@@ -35,8 +40,11 @@ public class JSONToolsController {
         logger.debug(Arrays.toString(transforms));
 
         // perform the transformation, you should run your logic here, below is just a silly example
-        JSONToolsTransformer transformer = new JSONToolsTransformer(transforms);
-        return transformer.transform(text);
+        List<String> wl = new ArrayList<String>();
+        wl.add("One");
+        wl.add("Another");
+        JsonObjectInterface json = new JsonMinifier(new JsonBeautifier(new JsonWhitelist(new JsonBlacklist(new JsonObject(), wl),wl)));
+        return json.decorate();
     }
 
 

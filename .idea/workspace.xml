@@ -4,7 +4,23 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="" />
+    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Customized project base&#10;&#10;created placeholder classes and functions">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBeautifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonDecorator.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonMinifier.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObject.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObjectInterface.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonWhitelist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/app/JSONToolsApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/app/JSONToolsApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JSONToolsTransformer.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.properties" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.properties" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/put/poznan/transformer/logic/TextTransformer.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/pl/put/poznan/transformer/rest/TextTransformerController.class" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,9 +29,13 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
   <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
@@ -33,6 +53,7 @@
     <option name="height" value="877" />
   </component>
   <component name="ProjectId" id="1ky6jafGVWRXBPEvTgdAJgYNqlu" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -41,7 +62,8 @@
   "keyToString": {
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "last_opened_file_path": "C:/Users/user/Desktop/IO/ioprojectarchitecture"
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "C:/Users/user/Desktop/ioprojectarchitecture"
   }
 }]]></component>
   <component name="RunManager">
@@ -122,30 +144,19 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="221" y="43" key="#Project_Structure" timestamp="1606660679896">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state x="221" y="43" key="#Project_Structure/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606660679896" />
-    <state width="1373" height="230" key="GridCell.Tab.0.bottom" timestamp="1606661138771">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state width="1373" height="230" key="GridCell.Tab.0.bottom/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606661138771" />
-    <state width="1373" height="230" key="GridCell.Tab.0.center" timestamp="1606661138770">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state width="1373" height="230" key="GridCell.Tab.0.center/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606661138770" />
-    <state width="1373" height="230" key="GridCell.Tab.0.left" timestamp="1606661138769">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state width="1373" height="230" key="GridCell.Tab.0.left/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606661138769" />
-    <state width="1373" height="230" key="GridCell.Tab.0.right" timestamp="1606661138770">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state width="1373" height="230" key="GridCell.Tab.0.right/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606661138770" />
-    <state x="221" y="43" key="SettingsEditor" timestamp="1606660905588">
-      <screen x="26" y="23" width="1414" height="877" />
-    </state>
-    <state x="221" y="43" key="SettingsEditor/26.23.1414.877/1440.-97.1920.1080@26.23.1414.877" timestamp="1606660905588" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Customized project base&#10;&#10;created placeholder classes and functions" />
+    <option name="LAST_COMMIT_MESSAGE" value="Customized project base&#10;&#10;created placeholder classes and functions" />
   </component>
 </project>
