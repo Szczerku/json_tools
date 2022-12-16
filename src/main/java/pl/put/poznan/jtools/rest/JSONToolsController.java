@@ -7,48 +7,56 @@ import pl.put.poznan.jtools.logic.*;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Objects;
 
 
 @RestController
-@RequestMapping("/{text}")
+@RequestMapping("/{decorator}")
 public class JSONToolsController {
 
     private static final Logger logger = LoggerFactory.getLogger(JSONToolsController.class);
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
-    public String get(@PathVariable String text,
-                              @RequestParam(value="transforms", defaultValue="upper,escape") String[] transforms) {
+    public String get(@PathVariable String decorator) {
 
-        // log the parameters
-        logger.debug(text);
-        logger.debug(Arrays.toString(transforms));
-
-        // perform the transformation, you should run your logic here, below is just a silly example
-        List<String> wl = new ArrayList<String>();
-        wl.add("One");
-        wl.add("Another");
-        JsonObjectInterface json = new JsonMinifier(new JsonBeautifier(new JsonWhitelist(new JsonBlacklist(new JsonObject(), wl),wl)));
-        return json.decorate();
+        if (Objects.equals(decorator, "minify") || Objects.equals(decorator, "beautify") || Objects.equals(decorator, "whitelist") || Objects.equals(decorator, "blacklist")) {
+            logger.debug(decorator);
+            return "This is an endpoint for the " + decorator + " decorator, use the POST request.";
+        }
+        return "This endpoint doesn't exist";
     }
 
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
-    public String post(@PathVariable String text,
-                      @RequestBody String[] transforms) {
+    public String post(@PathVariable String decorator,
+                      @RequestBody String jsonText) {
 
         // log the parameters
-        logger.debug(text);
-        logger.debug(Arrays.toString(transforms));
+        logger.debug(decorator);
+        logger.debug(jsonText);
 
-        // perform the transformation, you should run your logic here, below is just a silly example
-        List<String> wl = new ArrayList<String>();
-        wl.add("One");
-        wl.add("Another");
-        JsonObjectInterface json = new JsonMinifier(new JsonBeautifier(new JsonWhitelist(new JsonBlacklist(new JsonObject(), wl),wl)));
-        return json.decorate();
+        // perform the transformation, you should run your logic here, below is just a silly examplereturn json.decorate();
+        if (Objects.equals(decorator, "minify")) {
+            JsonObjectInterface json = new JsonMinifier(new JsonObject());
+            return json.decorate();
+        }else if(Objects.equals(decorator, "beautify")) {
+            JsonObjectInterface json = new JsonBeautifier(new JsonObject());
+            return json.decorate();
+        }else if(Objects.equals(decorator, "whitelist")){
+            List<String> wl = new ArrayList<>();
+            wl.add("test");
+            wl.add("param");
+            JsonObjectInterface json = new JsonWhitelist(new JsonObject(),wl);
+            return json.decorate();
+        }else if(Objects.equals(decorator, "blacklist")) {
+            List<String> wl = new ArrayList<>();
+            wl.add("test");
+            wl.add("param");
+            JsonObjectInterface json = new JsonWhitelist(new JsonObject(), wl);
+            return json.decorate();
+        }else{
+            return "This endpoint doesn't exist";
+        }
     }
-
-
-
 }
 
 
