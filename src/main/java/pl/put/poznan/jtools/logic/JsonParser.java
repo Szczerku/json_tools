@@ -6,9 +6,17 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 
 public class JsonParser {
 
-    public static JsonNode parse(String jsonString) throws JsonProcessingException  {
+    public static JsonNode parse(String jsonString) {
 
         ObjectMapper mapper = new ObjectMapper();
-        return mapper.readTree(jsonString);
+        try {
+            JsonNode root = mapper.readTree(jsonString);
+            return root;
+        }
+        catch (Exception e) {
+            // TODO: Better exception handling
+            System.out.println("JsonParser failed");
+            return mapper.nullNode();
+        }
     }
 }
