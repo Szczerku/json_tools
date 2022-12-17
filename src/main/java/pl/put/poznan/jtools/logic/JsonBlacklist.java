@@ -14,7 +14,7 @@ public class JsonBlacklist extends JsonDecorator {
     public String decorateBlacklist() {
         String jsonString = super.decorate();
         // TODO: implement blacklisting
-        // can access whitelist here, example: blacklist.get(0);
+        // can access blacklist here, example: blacklist.get(0);
 
         // TODO: replace this with properly filtered string
         return jsonString;

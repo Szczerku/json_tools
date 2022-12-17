@@ -4,10 +4,9 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Proper use of decorator features. JsonObject now contains jsonText.">
+    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Test that shows the power of the decorator pattern.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,7 +235,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671310389092</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="Test that shows the power of the decorator pattern.">
+      <created>1671311314567</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1671311314567</updated>
+    </task>
+    <option name="localTasksCounter" value="12" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -268,6 +274,7 @@
     <MESSAGE value="Better testing code" />
     <MESSAGE value="Better testing code, new tests" />
     <MESSAGE value="Proper use of decorator features. JsonObject now contains jsonText." />
-    <option name="LAST_COMMIT_MESSAGE" value="Proper use of decorator features. JsonObject now contains jsonText." />
+    <MESSAGE value="Test that shows the power of the decorator pattern." />
+    <option name="LAST_COMMIT_MESSAGE" value="Test that shows the power of the decorator pattern." />
   </component>
 </project>
