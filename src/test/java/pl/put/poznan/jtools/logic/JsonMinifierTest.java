@@ -19,5 +19,11 @@ public class JsonMinifierTest {
         String jsonString = JsonFileReader.read(jsonExample);
 
         assertEquals(minifiedJsonString, jsonString);
+
+        assertEquals(
+                new JsonMinifier(
+                    new JsonBeautifier(
+                            new JsonMinifier(
+                                    new JsonObject(beautifiedJsonString)))).decorate(), jsonString);
     }
 }

@@ -21,5 +21,11 @@ public class JsonBeautifierTest {
                 .replace("]", " ]"); // different formatting
 
         assertEquals(beautifiedJsonString, jsonString);
+
+        assertEquals(
+                new JsonBeautifier(
+                        new JsonMinifier(
+                                new JsonBeautifier(
+                                        new JsonObject(minifiedJsonString)))).decorate(), jsonString);
     }
 }

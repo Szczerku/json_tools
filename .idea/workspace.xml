@@ -4,15 +4,8 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Better testing code, new tests">
+    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Proper use of decorator features. JsonObject now contains jsonText.">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBeautifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBeautifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonMinifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonMinifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObject.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonWhitelist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonWhitelist.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" afterDir="false" />
     </list>
@@ -229,7 +222,21 @@
       <option name="project" value="LOCAL" />
       <updated>1671301733087</updated>
     </task>
-    <option name="localTasksCounter" value="9" />
+    <task id="LOCAL-00009" summary="Better testing code, new tests">
+      <created>1671310274476</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1671310274476</updated>
+    </task>
+    <task id="LOCAL-00010" summary="Proper use of decorator features. JsonObject now contains jsonText.">
+      <created>1671310389092</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1671310389092</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -260,6 +267,7 @@
     <MESSAGE value="Usable testing code. First test partially implemented. Example json files added." />
     <MESSAGE value="Better testing code" />
     <MESSAGE value="Better testing code, new tests" />
-    <option name="LAST_COMMIT_MESSAGE" value="Better testing code, new tests" />
+    <MESSAGE value="Proper use of decorator features. JsonObject now contains jsonText." />
+    <option name="LAST_COMMIT_MESSAGE" value="Proper use of decorator features. JsonObject now contains jsonText." />
   </component>
 </project>
