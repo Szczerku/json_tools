@@ -10,9 +10,14 @@ public class JsonWhitelist extends JsonDecorator{
     }
 
     public String decorate() {
-        return super.decorate() + decorateWhitelist(whitelist);
+        return decorateWhitelist();
     }
-    public String decorateWhitelist(List<String> whitelist){
-        return " whitelisted with " + whitelist;
+    public String decorateWhitelist(){
+        String jsonString = super.decorate();
+        // TODO: implement whitelisting
+        // can access whitelist here, example: whitelist.get(0);
+
+        // TODO: replace this with properly filtered string
+        return jsonString;
     }
 }

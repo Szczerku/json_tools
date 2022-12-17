@@ -9,13 +9,11 @@ public class JsonBeautifier extends JsonDecorator{
     }
 
     public String decorate() {
-        return super.decorate() + decorateBeautify();
+        return decorateBeautify();
     }
-    public String decorateBeautify(){
-        return " beautified";
-    }
+    public String decorateBeautify() {
+        String jsonString = super.decorate();
 
-    public static String beautify(String jsonString) {
         JsonNode jsonNode = JsonParser.parse(jsonString);
         ObjectMapper mapper = new ObjectMapper();
         try {

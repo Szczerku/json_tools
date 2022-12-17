@@ -36,22 +36,22 @@ public class JSONToolsController {
 
         // perform the transformation, you should run your logic here, below is just a silly examplereturn json.decorate();
         if (Objects.equals(decorator, "minify")) {
-            JsonObjectInterface json = new JsonMinifier(new JsonObject());
+            JsonObjectInterface json = new JsonMinifier(new JsonObject(jsonText));
             return json.decorate();
         }else if(Objects.equals(decorator, "beautify")) {
-            JsonObjectInterface json = new JsonBeautifier(new JsonObject());
+            JsonObjectInterface json = new JsonBeautifier(new JsonObject(jsonText));
             return json.decorate();
         }else if(Objects.equals(decorator, "whitelist")){
             List<String> wl = new ArrayList<>();
             wl.add("test");
             wl.add("param");
-            JsonObjectInterface json = new JsonWhitelist(new JsonObject(),wl);
+            JsonObjectInterface json = new JsonWhitelist(new JsonObject(jsonText),wl);
             return json.decorate();
         }else if(Objects.equals(decorator, "blacklist")) {
             List<String> wl = new ArrayList<>();
             wl.add("test");
             wl.add("param");
-            JsonObjectInterface json = new JsonWhitelist(new JsonObject(), wl);
+            JsonObjectInterface json = new JsonWhitelist(new JsonObject(jsonText), wl);
             return json.decorate();
         }else{
             return "This endpoint doesn't exist";

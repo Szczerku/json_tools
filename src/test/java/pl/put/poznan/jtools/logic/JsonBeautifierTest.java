@@ -11,7 +11,8 @@ public class JsonBeautifierTest {
     public void testBeautify() {
         Path minifiedJsonExample = ResourcePathHelper.getMinifiedJsonExampleFilePath("minifiedexample1.json");
         String minifiedJsonString = JsonFileReader.read(minifiedJsonExample);
-        String beautifiedJsonString = JsonBeautifier.beautify(minifiedJsonString);
+        JsonObjectInterface jsonObject = new JsonBeautifier(new JsonObject(minifiedJsonString));
+        String beautifiedJsonString = jsonObject.decorate();
 
         Path jsonExample = ResourcePathHelper.getJsonExampleFilePath("example1.json");
         String jsonString = JsonFileReader.read(jsonExample)

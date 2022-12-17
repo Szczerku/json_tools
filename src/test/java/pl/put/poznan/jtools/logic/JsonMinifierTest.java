@@ -12,7 +12,8 @@ public class JsonMinifierTest {
     public void testMinify() {
         Path beautifiedJsonExample = ResourcePathHelper.getJsonExampleFilePath("example1.json");
         String beautifiedJsonString = JsonFileReader.read(beautifiedJsonExample);
-        String minifiedJsonString = JsonMinifier.minify(beautifiedJsonString);
+        JsonObjectInterface jsonObject = new JsonMinifier(new JsonObject(beautifiedJsonString));
+        String minifiedJsonString = jsonObject.decorate();
 
         Path jsonExample = ResourcePathHelper.getMinifiedJsonExampleFilePath("minifiedexample1.json");
         String jsonString = JsonFileReader.read(jsonExample);

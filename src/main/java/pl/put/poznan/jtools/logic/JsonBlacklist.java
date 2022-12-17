@@ -9,11 +9,14 @@ public class JsonBlacklist extends JsonDecorator {
         this.blacklist = blacklist;
     }
 
-    public String decorate() {
-        return super.decorate() + decorateBlacklist(blacklist);
-    }
+    public String decorate() { return decorateBlacklist(); }
 
-    public String decorateBlacklist(List<String> blacklist) {
-        return " blacklisted with " + blacklist;
+    public String decorateBlacklist() {
+        String jsonString = super.decorate();
+        // TODO: implement blacklisting
+        // can access whitelist here, example: blacklist.get(0);
+
+        // TODO: replace this with properly filtered string
+        return jsonString;
     }
 }
