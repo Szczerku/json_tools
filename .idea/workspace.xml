@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Unfinished code for json beautifier testing.">
-      <change afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
+    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Usable testing code. First test partially implemented. Example json files added.">
+      <change afterPath="$PROJECT_DIR$/src/test/resources/JsonExamples/example1.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/resources/JsonMinifiedExamples/minifiedexample1.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileReader.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileWriter.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,10 +53,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "last_opened_file_path": "C:/Users/Maciej/Desktop/studia/przedmioty/Inzynieria Oprogramowania/lab9/Mocks"
+    "last_opened_file_path": "C:/Users/Maciej/Desktop/studia/przedmioty/Inzynieria_Oprogramowania/projekt1/json_tools"
   }
 }]]></component>
-  <component name="RunManager">
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria Oprogramowania\projekt1\json_tools\src\test" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JUnit.JsonBeautifierTest.testBeautify">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -79,6 +85,23 @@
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonBeautifierTest.testBeautify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ioprojectarchitecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.jtools.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.jtools.logic" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonBeautifierTest" />
+      <option name="METHOD_NAME" value="testBeautify" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -110,6 +133,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonBeautifierTest.testBeautify" />
         <item itemvalue="Application.JSONToolsApplication" />
       </list>
     </recent_temporary>
@@ -153,7 +177,14 @@
       <option name="project" value="LOCAL" />
       <updated>1671281660048</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Unfinished code for json beautifier testing.">
+      <created>1671287706308</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1671287706308</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -181,6 +212,7 @@
     <MESSAGE value="simple json minifier, JsonFileWriter, catch exceptions in JsonParser" />
     <MESSAGE value="simple json beautifier" />
     <MESSAGE value="Unfinished code for json beautifier testing." />
-    <option name="LAST_COMMIT_MESSAGE" value="Unfinished code for json beautifier testing." />
+    <MESSAGE value="Usable testing code. First test partially implemented. Example json files added." />
+    <option name="LAST_COMMIT_MESSAGE" value="Usable testing code. First test partially implemented. Example json files added." />
   </component>
 </project>
