@@ -1,4 +1,6 @@
 package pl.put.poznan.jtools.rest;
+import com.fasterxml.jackson.databind.node.ArrayNode;
+import com.fasterxml.jackson.databind.node.TextNode;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.web.bind.annotation.*;
@@ -38,7 +40,6 @@ public class JSONToolsController {
             String jsonText = jsonNode.get("jsonText").toString();
             logger.debug(jsonNode.get("jsonText").toString());
 
-            // perform the transformation, you should run your logic here, below is just a silly examplereturn json.decorate();
             if (Objects.equals(decorator, "minify")) {
                 JsonObjectInterface json = new JsonMinifier(new JsonObject(jsonText));
                 return json.decorate();
@@ -46,17 +47,36 @@ public class JSONToolsController {
                 JsonObjectInterface json = new JsonBeautifier(new JsonObject(jsonText));
                 return json.decorate();
             } else if (Objects.equals(decorator, "whitelist")) {
-                List<String> wl = new ArrayList<>();
-                wl.add("test");
-                wl.add("param");
-                JsonObjectInterface json = new JsonWhitelist(new JsonObject(jsonText), wl);
+                List<String> whitelist = new ArrayList<>();
+                JsonNode whitelistNode = jsonNode.get("whitelist");
+                if (!(whitelistNode instanceof ArrayNode)) {
+                    throw new BadRequestException();
+                }
+                for(JsonNode item:  whitelistNode){
+                    if (!(item instanceof TextNode)){
+                        throw new BadRequestException();
+                    }
+                    whitelist.add(item.textValue());
+                }
+                logger.debug(whitelist.toString());
+                JsonObjectInterface json = new JsonWhitelist(new JsonObject(jsonText), whitelist);
                 return json.decorate();
             } else if (Objects.equals(decorator, "blacklist")) {
-                List<String> wl = new ArrayList<>();
-                wl.add("test");
-                wl.add("param");
-                JsonObjectInterface json = new JsonWhitelist(new JsonObject(jsonText), wl);
+                List<String> blacklist = new ArrayList<>();
+                JsonNode blacklistNode = jsonNode.get("blacklist");
+                if (!(blacklistNode instanceof ArrayNode)) {
+                    throw new BadRequestException();
+                }
+                for(JsonNode item:  blacklistNode){
+                    if (!(item instanceof TextNode)){
+                        throw new BadRequestException();
+                    }
+                    blacklist.add(item.textValue());
+                }
+                logger.debug(blacklist.toString());
+                JsonObjectInterface json = new JsonBlacklist(new JsonObject(jsonText), blacklist);
                 return json.decorate();
+
             } else {
                 throw new NotFoundException();
             }

@@ -1,5 +1,9 @@
 package pl.put.poznan.jtools.logic;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.node.ObjectNode;
+
+import java.util.Iterator;
 import java.util.List;
 
 public class JsonWhitelist extends JsonDecorator{
@@ -11,22 +15,29 @@ public class JsonWhitelist extends JsonDecorator{
     public String decorate() {
         return decorateWhitelist(super.decorate(), this.whitelist);
     }
-    public static String decorateWhitelist(String jsonString, List<String> white){
-        // TODO: implement whitelisting
-        // can access whitelist here, example: whitelist.get(0);
-        String[]arr = new String [white.size()];
-        //Converting List to Array
-        white.toArray(arr);
-        for (int i=0; i < arr.length; i++){
-            if(jsonString.contains(arr[i])) {
-                jsonString = jsonString.replaceAll(arr[i], Integer.toString(i));
+    public static String decorateWhitelist(String jsonString, List<String> white) {
+        try {
+            JsonNode node = JsonParser.parse(jsonString);
+            recursiveWhitelistFilter(node, white);
+            return node.toString();
+        } catch (Exception e) {
+            e.printStackTrace();
+            return "";
+        }
+    }
+
+    public static void recursiveWhitelistFilter(JsonNode node, List<String> wList) {
+        if (node instanceof ObjectNode) {
+            JsonNode deepcopyNode = node.deepCopy();
+            Iterator<String> fields = deepcopyNode.fieldNames();
+            while (fields.hasNext()) {
+                String field = fields.next();
+                if (!(wList.contains(field))) {
+                    ((ObjectNode)node).remove(field);
+                }else{
+                    recursiveWhitelistFilter(node.get(field),wList);
+                }
             }
         }
-        jsonString = jsonString.replaceAll("[^0-9]","");
-        for (int j=0; j < arr.length; j++){
-            jsonString = jsonString.replaceAll(Integer.toString(j),arr[j]);
-        }
-        // TODO: replace this with properly filtered string
-        return jsonString;
     }
 }
