@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.JsonNode;
 @RequestMapping("/{decorator}")
 public class JSONToolsController {
 
-    private static final Logger logger = LoggerFactory.getLogger(JSONToolsController.class);
+    private final Logger logger = LoggerFactory.getLogger(JSONToolsController.class);
 
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public String get(@PathVariable String decorator) {
@@ -25,6 +25,7 @@ public class JSONToolsController {
             logger.debug(decorator);
             return "This is an endpoint for the " + decorator + " decorator, use the POST request.";
         }
+        logger.info("Incorrect endpoint requested");
         return "This endpoint doesn't exist";
     }
 
@@ -36,7 +37,8 @@ public class JSONToolsController {
         logger.debug(decorator);
         logger.debug(jsonData);
         try {
-            JsonNode jsonNode = JsonParser.parse(jsonData);
+            JsonParser parser = new JsonParser();
+            JsonNode jsonNode = parser.parse(jsonData);
             String jsonText = jsonNode.get("jsonText").toString();
             logger.debug(jsonNode.get("jsonText").toString());
 
@@ -78,6 +80,7 @@ public class JSONToolsController {
                 return json.decorate();
 
             } else {
+                logger.info("Incorrect endpoint requested");
                 throw new NotFoundException();
             }
         } catch (NullPointerException err) {

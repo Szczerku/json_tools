@@ -10,12 +10,13 @@ public class JsonBeautifierTest {
     @Test
     public void testBeautify() {
         Path minifiedJsonExample = ResourcePathHelper.getMinifiedJsonExampleFilePath("minifiedexample1.json");
-        String minifiedJsonString = JsonFileReader.read(minifiedJsonExample);
+        JsonFileReader fileReader = new JsonFileReader();
+        String minifiedJsonString = fileReader.read(minifiedJsonExample);
         JsonObjectInterface jsonObject = new JsonBeautifier(new JsonObject(minifiedJsonString));
         String beautifiedJsonString = jsonObject.decorate();
 
         Path jsonExample = ResourcePathHelper.getJsonExampleFilePath("example1.json");
-        String jsonString = JsonFileReader.read(jsonExample)
+        String jsonString = fileReader.read(jsonExample)
                 .replace(": ", " : ")
                 .replace("[", "[ ")
                 .replace("]", " ]"); // different formatting

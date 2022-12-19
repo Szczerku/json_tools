@@ -3,12 +3,16 @@ package pl.put.poznan.jtools.logic;
 import java.util.List;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import java.util.*;
 
 
 
 public class JsonBlacklist extends JsonDecorator {
     private final List<String> blacklist;
+    private final Logger logger = LoggerFactory.getLogger(JsonBlacklist.class);
 
     public String decorate() {
         return decorateBlacklist(super.decorate(), this.blacklist);
@@ -21,10 +25,12 @@ public class JsonBlacklist extends JsonDecorator {
 
     public String decorateBlacklist(String jsonString, List<String> black) {
         try {
-            JsonNode node = JsonParser.parse(jsonString);
+            JsonParser parser = new JsonParser();
+            JsonNode node = parser.parse(jsonString);
             recursiveBlacklistFilter(node, black);
             return node.toString();
         } catch (Exception e) {
+            logger.error("decorateBlacklist failed");
             e.printStackTrace();
             return "";
         }

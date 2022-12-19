@@ -4,11 +4,18 @@
     <option name="autoReloadType" value="ALL" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="Add Javadoc">
+    <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="More logging. Removed few statics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBeautifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBeautifier.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonBlacklist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileReader.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileReader.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileWriter.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonFileWriter.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonMinifier.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonMinifier.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObject.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonObject.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonWhitelist.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/logic/JsonWhitelist.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonMinifierTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/target/maven-status/maven-compiler-plugin/testCompile/default-testCompile/createdFiles.lst" afterDir="false" />
     </list>
@@ -260,7 +267,28 @@
       <option name="project" value="LOCAL" />
       <updated>1671479481201</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="Documentation">
+      <created>1671481299887</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1671481299887</updated>
+    </task>
+    <task id="LOCAL-00015" summary="Documentation">
+      <created>1671481603744</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1671481603744</updated>
+    </task>
+    <task id="LOCAL-00016" summary="Unnecessary static">
+      <created>1671485233100</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1671485233100</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
@@ -295,6 +323,9 @@
     <MESSAGE value="Test that shows the power of the decorator pattern." />
     <MESSAGE value="Automatic versioning" />
     <MESSAGE value="Add Javadoc" />
-    <option name="LAST_COMMIT_MESSAGE" value="Add Javadoc" />
+    <MESSAGE value="Documentation" />
+    <MESSAGE value="Unnecessary static" />
+    <MESSAGE value="More logging. Removed few statics" />
+    <option name="LAST_COMMIT_MESSAGE" value="More logging. Removed few statics" />
   </component>
 </project>

@@ -2,10 +2,12 @@ package pl.put.poznan.jtools.logic;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 public class JsonParser {
-
-    public static JsonNode parse(String jsonString) {
+    private final Logger logger = LoggerFactory.getLogger(JsonParser.class);
+    public JsonNode parse(String jsonString) {
 
         ObjectMapper mapper = new ObjectMapper();
         try {
@@ -13,8 +15,7 @@ public class JsonParser {
             return root;
         }
         catch (Exception e) {
-            // TODO: Better exception handling
-            System.out.println("JsonParser failed!");
+            logger.error("JsonParser failed!");
             return mapper.nullNode();
         }
     }

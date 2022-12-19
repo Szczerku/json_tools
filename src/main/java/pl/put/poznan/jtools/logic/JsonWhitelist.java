@@ -2,12 +2,15 @@ package pl.put.poznan.jtools.logic;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.node.ObjectNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.Iterator;
 import java.util.List;
 
 public class JsonWhitelist extends JsonDecorator{
     public final List<String> whitelist;
+    private final Logger logger = LoggerFactory.getLogger(JsonWhitelist.class);
     public JsonWhitelist(JsonObjectInterface jsonObject, List<String> whitelist){
         super(jsonObject);
         this.whitelist = whitelist;
@@ -17,10 +20,12 @@ public class JsonWhitelist extends JsonDecorator{
     }
     public String decorateWhitelist(String jsonString, List<String> white) {
         try {
-            JsonNode node = JsonParser.parse(jsonString);
+            JsonParser parser = new JsonParser();
+            JsonNode node = parser.parse(jsonString);
             recursiveWhitelistFilter(node, white);
             return node.toString();
         } catch (Exception e) {
+            logger.error("decorateWhitelist failed!");
             e.printStackTrace();
             return "";
         }

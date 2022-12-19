@@ -1,11 +1,17 @@
 package pl.put.poznan.jtools.logic;
 
 import com.fasterxml.jackson.databind.JsonNode;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 /***
  * class designed for text processing with a focus on minify
  */
 public class JsonMinifier extends JsonDecorator{
+    /***
+     * Gives logging capabilities to the class
+     */
+    private final Logger logger = LoggerFactory.getLogger(JsonMinifier.class);
     /***
      * Creates minifier
      * @param jsonObject object containing json text to minify
@@ -29,7 +35,8 @@ public class JsonMinifier extends JsonDecorator{
      */
     public String decorateMinify() {
         String jsonString = super.decorate();
-        JsonNode jsonNode = JsonParser.parse(jsonString);
+        JsonParser parser = new JsonParser();
+        JsonNode jsonNode = parser.parse(jsonString);
         return jsonNode.toString();
     }
 }
