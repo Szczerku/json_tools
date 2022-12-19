@@ -15,7 +15,7 @@ public class JsonWhitelist extends JsonDecorator{
     public String decorate() {
         return decorateWhitelist(super.decorate(), this.whitelist);
     }
-    public static String decorateWhitelist(String jsonString, List<String> white) {
+    public String decorateWhitelist(String jsonString, List<String> white) {
         try {
             JsonNode node = JsonParser.parse(jsonString);
             recursiveWhitelistFilter(node, white);
@@ -26,7 +26,7 @@ public class JsonWhitelist extends JsonDecorator{
         }
     }
 
-    public static void recursiveWhitelistFilter(JsonNode node, List<String> wList) {
+    public void recursiveWhitelistFilter(JsonNode node, List<String> wList) {
         if (node instanceof ObjectNode) {
             JsonNode deepcopyNode = node.deepCopy();
             Iterator<String> fields = deepcopyNode.fieldNames();

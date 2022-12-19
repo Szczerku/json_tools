@@ -19,7 +19,7 @@ public class JsonBlacklist extends JsonDecorator {
         this.blacklist = blacklist;
     }
 
-    public static String decorateBlacklist(String jsonString, List<String> black) {
+    public String decorateBlacklist(String jsonString, List<String> black) {
         try {
             JsonNode node = JsonParser.parse(jsonString);
             recursiveBlacklistFilter(node, black);
@@ -30,7 +30,7 @@ public class JsonBlacklist extends JsonDecorator {
         }
     }
 
-    public static void recursiveBlacklistFilter(JsonNode node, List<String> bList) {
+    public void recursiveBlacklistFilter(JsonNode node, List<String> bList) {
         if (node instanceof ObjectNode) {
             JsonNode deepcopyNode = node.deepCopy();
             Iterator<String> fields = deepcopyNode.fieldNames();
