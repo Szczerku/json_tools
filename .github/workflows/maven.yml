@@ -35,9 +35,9 @@ jobs:
         java-version: '11'
         distribution: 'temurin'
         cache: maven
-    - name: Build with Maven and upload packag
-      run: mvn -B package --file pom.xml
-    - name: Move build do staging
+    - name: Build with Maven
+      run: mvn -B package -D JSON-tools-version=${{ steps.version_tag.outputs.new_tag }} --file pom.xml
+    - name: Move build to staging
       run: mkdir json_tools-${{ steps.version_tag.outputs.new_tag }} && cp target/*.jar json_tools-${{ steps.version_tag.outputs.new_tag }}
     - name: Zip dir
       run: zip -r json_tools-${{ steps.version_tag.outputs.new_tag }}.zip json_tools-${{ steps.version_tag.outputs.new_tag }}
