@@ -5,6 +5,9 @@ package pl.put.poznan.jtools.logic;
  * Object to be decorated by using decorator design pattern
  */
 public class JsonObject implements JsonObjectInterface{
+    /***
+     * Holds JSON text that is used for decoration
+     */
     private final String jsonText;
 
     /***
