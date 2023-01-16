@@ -1,0 +1,5 @@
+pl\put\poznan\jtools\logic\JsonBeautifierTest.class
+pl\put\poznan\jtools\logic\JsonParserTest.class
+pl\put\poznan\jtools\helper\ResourcePathHelper.class
+pl\put\poznan\jtools\logic\JsonMinifierTest.class
+pl\put\poznan\jtools\logic\JsonFileReaderTest.class

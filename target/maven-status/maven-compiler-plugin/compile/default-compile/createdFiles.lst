@@ -1,0 +1,14 @@
+pl\put\poznan\jtools\logic\JsonFileWriter.class
+pl\put\poznan\jtools\logic\JsonObject.class
+pl\put\poznan\jtools\logic\JsonDecorator.class
+pl\put\poznan\jtools\app\JSONToolsApplication.class
+pl\put\poznan\jtools\logic\JsonWhitelist.class
+pl\put\poznan\jtools\logic\JsonMinifier.class
+pl\put\poznan\jtools\rest\BadRequestException.class
+pl\put\poznan\jtools\logic\JsonParser.class
+pl\put\poznan\jtools\logic\JsonBlacklist.class
+pl\put\poznan\jtools\rest\NotFoundException.class
+pl\put\poznan\jtools\logic\JsonFileReader.class
+pl\put\poznan\jtools\rest\JSONToolsController.class
+pl\put\poznan\jtools\logic\JsonObjectInterface.class
+pl\put\poznan\jtools\logic\JsonBeautifier.class

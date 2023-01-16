@@ -1,3 +1,14 @@
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/app/TextTransformerApplication.java
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/logic/TextTransformer.java
-/Users/mochodek/Documents/Dydaktyka/Wyklady/IO/Laboratory classes/projekt/ioprojectarchitecture/src/main/java/pl/put/poznan/transformer/rest/TextTransformerController.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonObject.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonBlacklist.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\rest\JSONToolsController.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonObjectInterface.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\app\JSONToolsApplication.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\rest\NotFoundException.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonParser.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonFileWriter.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonMinifier.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonFileReader.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\rest\BadRequestException.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonBeautifier.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonDecorator.java
+C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria_Oprogramowania\projekt1\json_tools\src\main\java\pl\put\poznan\jtools\logic\JsonWhitelist.java
