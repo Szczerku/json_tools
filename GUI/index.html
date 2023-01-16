@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <body>
+
+        <h2>JSON tools</h2>
+
+        <form>
+            <label for="jsonTextArea">Json Text</label><br>
+            <textarea type="text" id="jsonTextArea" name="jText" value="" placeholder=""></textarea><br>
+        </form>
+        <button onclick="submit()">Submit</button>
+
+        <script>
+            const server = "http://127.0.0.1:8080/"
+
+            var textArea = document.getElementById("jsonTextArea"); 
+            textArea.placeholder = '{"glossary":{"title":"example glossary","GlossDiv":{"title":"S","GlossList":{"GlossEntry":{"ID":"SGML","SortAs":"SGML","GlossTerm":"Standard Generalized Markup Language","Acronym":"SGML","Abbrev":"ISO 8879:1986","GlossDef":{"para":"A meta-markup language, used to create markup languages such as DocBook.","GlossSeeAlso":["GML","XML"]},"GlossSee":"markup"}}}}}'
+
+            function sendJSONRequest(url, jsonData) {
+                fetch(url, {
+                    mode: 'no-cors',
+                    method: 'POST',
+                    headers: {
+                    'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(jsonData),
+                })
+                .then((response) => response.json())
+                .then((result) => {
+                    console.log('Success:', result);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+            }
+
+            function submit() {
+                var pathVariable = "beautify";
+                var jsonData = {
+                    "jsonText": textArea.value == '' ? textArea.placeholder : textArea.value
+                };
+                sendJSONRequest(server + pathVariable, jsonData);
+            }
+        </script>
+    </body>
+</html>
