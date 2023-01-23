@@ -18,6 +18,7 @@ public class JSONToolsController {
 
     private final Logger logger = LoggerFactory.getLogger(JSONToolsController.class);
 
+    @CrossOrigin()
     @RequestMapping(method = RequestMethod.GET, produces = "application/json")
     public String get(@PathVariable String decorator) {
 
@@ -29,6 +30,7 @@ public class JSONToolsController {
         return "This endpoint doesn't exist";
     }
 
+    @CrossOrigin()
     @RequestMapping(method = RequestMethod.POST, produces = "application/json")
     public String post(@PathVariable String decorator,
                        @RequestBody String jsonData) {
