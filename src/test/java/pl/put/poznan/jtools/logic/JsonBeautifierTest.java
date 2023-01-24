@@ -8,7 +8,7 @@ import java.nio.file.Path;
 
 public class JsonBeautifierTest {
     @Test
-    public void testBeautify() {
+    public void testDecorate() {
         Path minifiedJsonExample = ResourcePathHelper.getMinifiedJsonExampleFilePath("minifiedexample1.json");
         JsonFileReader fileReader = new JsonFileReader();
         String minifiedJsonString = fileReader.read(minifiedJsonExample);
@@ -29,4 +29,5 @@ public class JsonBeautifierTest {
                                 new JsonBeautifier(
                                         new JsonObject(minifiedJsonString)))).decorate(), jsonString);
     }
+
 }

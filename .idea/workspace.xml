@@ -6,10 +6,9 @@
   <component name="ChangeListManager">
     <list default="true" id="ddec5298-a09c-455a-9c39-fa30be24617d" name="Default" comment="More logging. Removed few statics">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/GUI/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/GUI/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ioprojectarchitecture.iml" beforeDir="false" afterPath="$PROJECT_DIR$/ioprojectarchitecture.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/pl/put/poznan/jtools/rest/JSONToolsController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBeautifierTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBlacklistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonBlacklistTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonWhitelistTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/pl/put/poznan/jtools/logic/JsonWhitelistTest.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -62,7 +61,7 @@
       <recent name="C:\Users\Maciej\Desktop\studia\przedmioty\Inzynieria Oprogramowania\projekt1\json_tools\src\test" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.JSONToolsApplication">
+  <component name="RunManager" selected="JUnit.JsonBeautifierTest.testDecorate">
     <configuration default="true" type="Applet" factoryName="Applet">
       <option name="HTML_USED" value="false" />
       <option name="WIDTH" value="400" />
@@ -90,7 +89,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonBeautifierTest.testBeautify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonBeautifierTest.testDecorate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ioprojectarchitecture" />
       <extension name="coverage">
         <pattern>
@@ -100,14 +99,14 @@
       </extension>
       <option name="PACKAGE_NAME" value="pl.put.poznan.jtools.logic" />
       <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonBeautifierTest" />
-      <option name="METHOD_NAME" value="testBeautify" />
+      <option name="METHOD_NAME" value="testDecorate" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="JsonMinifierTest.testMinify" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="JsonBlacklistTest.testDecorate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="ioprojectarchitecture" />
       <extension name="coverage">
         <pattern>
@@ -116,8 +115,42 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="pl.put.poznan.jtools.logic" />
-      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonMinifierTest" />
-      <option name="METHOD_NAME" value="testMinify" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonBlacklistTest" />
+      <option name="METHOD_NAME" value="testDecorate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonWhitelistTest.testDecorate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ioprojectarchitecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.jtools.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.jtools.logic" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonWhitelistTest" />
+      <option name="METHOD_NAME" value="testDecorate" />
+      <option name="TEST_OBJECT" value="method" />
+      <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="JsonWhitelistTest.testprimitivewhitelisting" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="ioprojectarchitecture" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="pl.put.poznan.jtools.logic.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="pl.put.poznan.jtools.logic" />
+      <option name="MAIN_CLASS_NAME" value="pl.put.poznan.jtools.logic.JsonWhitelistTest" />
+      <option name="METHOD_NAME" value="testprimitivewhitelisting" />
       <option name="TEST_OBJECT" value="method" />
       <option name="WORKING_DIRECTORY" value="$MODULE_DIR$" />
       <method v="2">
@@ -151,9 +184,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.JsonBeautifierTest.testDecorate" />
+        <item itemvalue="JUnit.JsonWhitelistTest.testDecorate" />
+        <item itemvalue="JUnit.JsonWhitelistTest.testprimitivewhitelisting" />
+        <item itemvalue="JUnit.JsonBlacklistTest.testDecorate" />
         <item itemvalue="Application.JSONToolsApplication" />
-        <item itemvalue="JUnit.JsonBeautifierTest.testBeautify" />
-        <item itemvalue="JUnit.JsonMinifierTest.testMinify" />
       </list>
     </recent_temporary>
   </component>
