@@ -7,6 +7,12 @@
         <form>
             <label for="inputArea">Json Text</label><br>
             <textarea type="text" id="inputArea" name="iText" value="" placeholder=""></textarea><br>
+            <label for="inputAreaOptions">Options</label><br>
+            <textarea type="text" id="inputAreaOptions" name="iText" value="" placeholder=""></textarea><br>
+            <select id="pathSelect">
+                <option value="beautify">beautify</option>
+                <option value="minify">minify</option>
+            </select>
         </form>
         <button onclick="submit()">Submit</button><br>
 
@@ -39,7 +45,7 @@
             }
 
             function submit() {
-                let pathVariable = "beautify";
+                let pathVariable = document.querySelector("#pathSelect").value;
                 let jsonRawText = inputArea.value == '' ? inputArea.placeholder : inputArea.value;
                 let jsonData = `{"jsonText": ${jsonRawText}}`;
                 sendJSONRequest(server + pathVariable, jsonData);
